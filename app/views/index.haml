@@ -1,0 +1,32 @@
+- @title = "Home"
+!!! 5
+%html{:lang => "en"}
+  %head
+    = partial :"partials/head"
+    %script{:src => '/assets/jquery-1.8.3.min.js'}
+    %script{:src => '/assets/jquery.mobile-1.2.0.min.js'}
+  %body
+    %script{:src => 'http://vjs.zencdn.net/c/video.js'}    
+    %script{:src => '/assets/application.js'}
+    %div{:id => "#{@mobile_page_id}", :data => {:role => 'page', :title => "#{@title}", 'add-back-btn' => 'true'}}
+
+      #main{"data-role" => "content"}
+        / section
+        %article.section
+          .info-block
+            %strong.logo
+              =link_to "TOUT", '#'
+            %strong.slogan Whatever Moves You
+            .btn-holder
+              =link_to "Download the App", '#transparent', :class => 'link-download', 'aria-haspopup' => 'true', 'data-corners' => 'true', 'data-rel' => 'popup'
+              / popup
+              .ui-content{:id => 'transparent', "data-role" => "popup"}
+                .title You need to Download The App
+                =link_to "Available on the App Store", '#main', :class => 'btn-app-store'
+                =link_to "close", '#main', :class => 'close'
+            =link_to 'Already have an account? Login', '#', :class => 'link-login'
+          =image_tag '/assets/img15.png', :alt => 'image description', :width => '320', :height => '210'
+        / heading-block
+        .heading-block
+          %h1 Featured TOUTS
+        = partial :"partials/tout"

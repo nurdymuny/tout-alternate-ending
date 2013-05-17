@@ -1,0 +1,50 @@
+/ header-section
+.header-section
+  / header-box
+  .header-box
+    .img-box.mark
+      =link_to "http://64.207.178.146:9292/users-profile/" + @username, '#' do
+        =image_tag @avatar, :alt => 'image description', :width => '51', :height => '51'
+    .link-holder
+      =link_to '#', :class => "follow-link" do
+        Follow
+        %span.mark= '+'
+    .text-holder
+      %h1
+        =link_to @fullname, '#'
+      %p= @bio
+  / tabset
+  %ul.tabset
+    %li.active
+      =link_to('#tab-1' + @username, :class => 'tab') do
+        Tout
+        %span= @touts_count
+        %em.arrow
+    %li
+      =link_to('#tab-2' + @username, :class => 'tab') do
+        Followers
+        %span= @followers_count
+        %em.arrow
+    %li
+      =link_to('#tab-3' + @username, :class => 'tab') do
+        Following
+        %span= @friends_count
+        %em.arrow
+    -#//if user signed in
+      .header-section
+        .gallery-block
+          .slideshow
+            .slideset
+              .slide.active
+                .placeholder
+                  =image_tag @avatar, :alt => 'image description', :width => '26', :height => '26'
+                  //=image_tag '/assets/img20.jpg', :width => '51', :height => '51', :alt => 'image description'
+                .text-holder
+                  .title 
+                    =@fullname
+                  =link_to @username, '#', :class => 'email'
+              .slide
+                .info-text
+                %p
+                  =@bio
+              .switcher

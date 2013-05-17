@@ -1,0 +1,52 @@
+%script{:src => 'http://vjs.zencdn.net/c/video.js'}
+%script{:src => '/assets/masonry.js'}
+%script{:src => '/assets/application.js'}
+- @title = "user-profile"
+.tabs-holder
+  %div{:id => "tab-1#{@username}", :class => "tab-content"}
+    %div{:id => "state1#{@username}", :class => "tab-001.active"}
+      = partial :"partials/tout"
+    %div{:id => "state2#{@username}", :class => "tab-002.active"}
+      %h2 1 day ago
+      / massonry-content
+      .massonry-content
+        .massonry-holder
+          -@touts.each_with_index do |f_tout, index|
+            .block
+              =link_to "", '#' do
+                =image_tag f_tout.image.thumbnail.http_url,  :width => '98', :height => '133', :alt => 'image description'
+
+  %div{:id => "tab-2#{@username}", :class => "tab-content"}
+    %ul.list-people.user{'data-role' => 'listview'}
+      - @followers.each_with_index do |u_follower, index|
+        %li
+          .img-box
+            =image_tag u_follower.avatar.small.http_url, :width => '41', :height => '41', :alt => 'image description'
+          .link-holder
+            =link_to 'http://64.207.178.146:9292/users-profile/' + u_follower.username, :class => 'follow-link' do
+              Follow
+              %span.mark +
+          .text-holder
+            %h2
+              =link_to 'http://64.207.178.146:9292/users-profile/' + u_follower.username do
+                =u_follower.username
+            %p= u_follower.location
+       
+  %div{:id => "tab-3#{@username}", :class => "tab-content"}
+    /list-people
+    %ul.list-people.user.add{'data-role' => 'listview'}
+      - @following.each do |u_following|
+        %li
+          .img-box.mark
+            =link_to 'http://64.207.178.146:9292/users-profile/' + u_following.username, '#' do
+              =image_tag u_following.avatar.small.http_url, :width => '41' , :height => '41', :alt => 'image description'
+          .link-holder
+            =link_to 'http://64.207.178.146:9292/users-profile/' + u_following.username, :class => 'follow-link' do
+              Follow
+              %span.mark +
+          .text-holder
+            %h2
+              =link_to 'http://64.207.178.146:9292/users-profile/' + u_following.username do
+                =u_following.username
+              %p= u_following.location
+

@@ -1,0 +1,14 @@
+.header-block
+  // if user signed in
+  //=link_to "mobile", '#', :class => 'mobile-link'
+  %strong.logo
+    =link_to "Tout", '#'
+  / btn-block
+  // if user signed in
+  //=link_to "setting", '#', :class => 'setting-link'
+  %ul.btn-block
+    %li.active
+      =link_to "", '#state1' + @username
+    %li
+      =link_to "", '#state2' + @username
+  

@@ -1,0 +1,30 @@
+- @title = "my-profile"
+!!! 5
+%html{:lang => "en"}
+  %head
+    = partial :"partials/head"
+  %body
+    %div{:id => "#{@mobile_page_id}", :data => {:role => 'page', :title => "#{@title}", 'add-back-btn' => 'true'}}
+      %header{:id => 'header', :class => 'special-tab', :data => {:role => 'header', :position => 'fixed'}}
+        .header-block
+          =link_to "mobile", '#', :class => 'mobile-link'
+          %strong.logo
+            =link_to "TOUT", '#'
+          =link_to "setting", '#', :class => 'setting-link'
+        .header-section
+          .gallery-block
+            .slideshow
+              .slideset
+                .slide.active
+                  .placeholder
+                    //=image_tag @avatar, :alt => 'image description', :width => '26', :height => '26'
+                    =image_tag '/assets/img20.jpg', :width => '51', :height => '51', :alt => 'image description'
+                  .text-holder
+                    .title 
+                      =@fullname
+                    //=link_to @username, '#', :class => 'email'
+                .slide
+                  .info-text
+                  %p
+                    =@bio
+                .switcher

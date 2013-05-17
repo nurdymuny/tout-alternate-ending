@@ -1,0 +1,1241 @@
+//
+// Main Stylesheet
+//
+
+// Compass Plugins
+// ===============
+//@import compass/reset
+//@import compass/css3
+
+// Sass Features
+// =============
+//@import 0.site-settings
+//@import 1.base
+//@import 2.layout
+//@import 3.states
+//@import 4.themes
+//@import variables
+//@import mixins/all
+//@import modules/all
+
+
+header, footer, article, section, hgroup, nav, figure, aside
+  display: block
+  -webkit-transform: translateZ(0)
+
+figure
+  margin: 0
+  padding: 0
+
+input
+  &[type=text], &[type=password], &[type=file], &[type=submit]
+    -webkit-appearance: none
+    -webkit-border-radius: 0
+    border-radius: 0
+
+textarea
+  -webkit-appearance: none
+  -webkit-border-radius: 0
+  border-radius: 0
+
+input[type=image]
+  padding: 0
+  border: none
+
+body
+  margin: 0
+  background: #e5e4e4
+  font: 12px / 16px Helvetica, Arial, sans-serif
+  color: #6d6e70
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: none
+  min-width: 320px
+  -webkit-transform: translateZ(0)
+
+img
+  border-style: none
+
+a
+  text-decoration: none
+  color: #00a4e4
+  &:hover
+    text-decoration: underline
+  &:active
+    background-color: transparent
+
+.ui-bar-a
+  text-shadow: none
+
+.ui-body-c, .ui-overlay-c
+  background: #e5e4e4
+
+/* home-pager
+
+#home-page
+  overflow: hidden
+  position: relative
+  z-index: 2
+
+/* header
+
+#header
+  width: 100%
+  z-index: 20
+  /*-webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1)
+  /*box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1)
+  &.ui-bar-a
+    background: none
+    border: none
+
+/* header-block
+
+.header-block
+  background: #41b0ed url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQxYjBlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTY2OWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #41b0ed 0%, #09669c 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #41b0ed), color-stop(100%, #09669c))
+  background: -webkit-linear-gradient(top, #41b0ed 0%, #09669c 100%)
+  background: -o-linear-gradient(top, #41b0ed 0%, #09669c 100%)
+  background: -ms-linear-gradient(top, #41b0ed 0%, #09669c 100%)
+  background: linear-gradient(to bottom, #41b0ed 0%, #09669c 100%)
+  overflow: hidden
+  border: solid
+  border-width: 0 0 1px
+  border-color: #393939
+  padding: 6px 11px 5px 19px
+  text-align: center
+
+.logo
+  display: inline-block
+  vertical-align: top
+  background: url(/assets/sprite.png) no-repeat
+  width: 81px
+  height: 33px
+  text-indent: -9999px
+  overflow: hidden
+  a
+    display: block
+    height: 100%
+
+#header .mobile-link
+  float: left
+  width: 20px
+  height: 31px
+  text-indent: -9999px
+  overflow: hidden
+  background: url(/assets/sprite.png) no-repeat -91px 0
+  -webkit-border-radius: 0
+  border-radius: 0
+  /*-webkit-box-shadow: none
+  /*box-shadow: none
+  border: none
+  position: relative
+  top: 0
+  left: 0
+  margin: 0
+  span
+    display: none
+
+.header-block .setting-link
+  float: right
+  background: url(/assets/sprite.png) no-repeat -194px -30px
+  width: 29px
+  height: 29px
+  text-indent: -9999px
+  overflow: hidden
+  margin: 1px -1px 0 0
+
+/* img-box
+
+#header .img-box
+  float: right
+  -webkit-border-radius: 4px
+  border-radius: 4px
+  border: 1px solid #004a73
+  background: #a4b2c3
+  /*-webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15)
+  /*box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15)
+  overflow: hidden
+  width: 31px
+  img
+    vertical-align: top
+
+/* header-section
+
+.header-section
+  width: auto
+  background: #d4d4d4
+  border-bottom: 1px solid #b6b5b5
+  position: relative
+  z-index: 21
+  &:after
+    content: ''
+    display: block
+    clear: both
+  .block
+    overflow: hidden
+    border-bottom: 1px solid #b6b6b6
+    padding: 11px 60px 6px 9px
+    text-shadow: 0 1px 0 #ececec
+    color: #6d6e70
+    /*-webkit-box-shadow: 0 1px 0 0 #ececec
+    /*box-shadow: 0 1px 0 0 #ececec
+    .partner-logo
+      float: left
+      margin: 0 13px 0 0
+      width: 56px
+      img
+        display: block
+        width: 100%
+        height: auto
+    .text-holder
+      overflow: hidden
+      padding: 2px 0 0
+    h1
+      font-size: 16px
+      line-height: 16px
+      color: #00a4e4
+      margin: 0
+    .title a
+      text-decoration: none
+      color: #00a4e4
+      &:hover
+        text-decoration: underline
+    p
+      margin: 0
+  .gallery-block
+    overflow: hidden
+    padding: 10px 6px 13px 5px
+    &.style02
+      padding: 10px 6px 1px 5px
+    .holder
+      width: 100%
+      position: relative
+      padding: 7px 0 6px
+      &:after
+        content: ''
+        display: block
+        clear: both
+
+.follow-link.ui-link
+  float: right
+  text-decoration: none
+  color: #fff !important
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.69)
+  padding: 5px 10px 5px 8px
+  -webkit-border-radius: 4px
+  border-radius: 4px
+  border: solid
+  border-width: 1px
+  border-color: #1781bd #0e75ae #076598
+  /*-webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4)
+  /*box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4)
+  letter-spacing: 0.2px
+  background: #32b3fb
+  background: -moz-linear-gradient(top, #32b3fb 0%, #097bbb 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #32b3fb), color-stop(100%, #097bbb))
+  background: -webkit-linear-gradient(top, #32b3fb 0%, #097bbb 100%)
+  background: -o-linear-gradient(top, #32b3fb 0%, #097bbb 100%)
+  background: -ms-linear-gradient(top, #32b3fb 0%, #097bbb 100%)
+  background: linear-gradient(to bottom, #32b3fb 0%, #097bbb 100%)
+  font-size: 12px
+  line-height: 17px
+
+.header-section .gallery-block .holder .follow-link.ui-link
+  margin: -7px 0 0 5px
+
+.follow-link.ui-link
+  &:hover, &:active
+    color: #fff
+    text-decoration: none
+  .mark
+    display: inline-block
+    vertical-align: top
+    font-size: 17px
+    position: relative
+    padding-right: 6px
+    line-height: 17px
+
+.header-section
+  .info-text
+    display: block
+    overflow: hidden
+    text-transform: uppercase
+    font-size: 13px
+    line-height: 16px
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.46)
+    color: #6d6e70
+    padding: 0 0 0 8px
+    letter-spacing: -0.4px
+  &.special
+    .carousel, .info-text
+      position: absolute
+      top: -9999px
+      left: -9999px
+      visibility: hidden
+    .block
+      .text-holder
+        position: absolute
+        top: -9999px
+        left: -9999px
+        visibility: hidden
+      padding: 0
+    .gallery-block
+      padding: 0
+    .block
+      float: left
+      /*-webkit-box-shadow: none
+      /*box-shadow: none
+      border: none
+    .gallery-block
+      float: right
+      .holder .follow-link.ui-link
+        margin-top: 4px
+    padding: 5px 6px 4px 9px
+    .block .partner-logo
+      width: 38px
+    .gallery-block .holder
+      padding: 0
+  &.style02.special
+    .block
+      position: absolute
+      top: -9999px
+      left: -9999px
+      visibility: hidden
+    .gallery-block
+      float: none
+    .info-text
+      position: relative
+      top: 0
+      left: 0
+      visibility: visible
+    .holder
+      padding-top: 7px
+    .gallery-block .holder .follow-link.ui-link
+      margin-top: -7px
+  .following
+    float: left
+    font-size: 16px
+    line-height: 20px
+    color: #555
+    text-shadow: 1px 1px 0 #fff
+    padding: 2px 0 2px 41px
+    background: url(/assets/sprite.png) no-repeat -234px -34px
+    margin: -2px 0 -5px 12px
+    &.ui-link
+      color: #555
+      text-shadow: 1px 1px 0 #fff
+    &:hover, &.ui-link:hover
+      color: #555
+
+/* carousel
+
+.carousel
+  background: #fff
+  padding: 3px 46px 3px 3px
+  border: 1px solid #cbcbcb
+  -webkit-border-radius: 4px
+  border-radius: 4px
+  position: relative
+  .mask
+    overflow: hidden
+  .slideset
+    width: 99999px
+    overflow: hidden
+    .slide
+      width: 42px
+      float: left
+      padding: 0 1px 0 0
+      img
+        vertical-align: top
+  .btn-next
+    position: absolute
+    width: 40px
+    height: 39px
+    background: #e3e3e3 url(/assets/sprite.png) no-repeat -274px 13px
+    top: 3px
+    right: 4px
+    text-indent: -9999px
+    overflow: hidden
+
+/* main
+
+#main
+  padding: 11px 7px
+  position: relative
+  z-index: 10
+  &.style02
+    background: #5e5e5e
+    padding-top: 9px
+  h2
+    font-size: 12px
+    line-height: 15px
+    color: #00a4e4
+    margin: 0 0 1px
+    a
+      text-decoration: none
+      color: #00a4e4
+      &:hover
+        color: #00a4e4
+        text-decoration: underline
+  p
+    margin: 0
+
+/* content-block
+
+.content-block
+  margin: 0 0 6px
+  border: 1px solid #c1c0c0
+  -webkit-border-radius: 4px
+  border-radius: 4px
+  background: #fff
+  padding: 6px 7px 0
+  position: relative
+  .holder
+    overflow: hidden
+    margin: 0 0 6px
+    position: relative
+    font-weight: bold
+    color: #6d6e70
+    .img-box
+      float: left
+      margin: 0 6px 0 0
+      -webkit-border-radius: 3px
+      border-radius: 3px
+      border: 1px solid #c5c4c4
+      background: #fff
+      padding: 2px
+      img
+        vertical-align: top
+    .text-holder
+      overflow: hidden
+    .time
+      position: absolute
+      top: 4px
+      right: 4px
+      font-style: normal
+      font-size: 11px
+      line-height: 13px
+  .video-block
+    overflow: hidden
+    margin: 0 0 8px
+    position: relative
+    img
+      display: block
+      width: 100%
+      height: auto
+    .btn-play
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 59px
+      height: 59px
+      margin: -31px 0 0 -29px
+      background: url(/assets/sprite.png) no-repeat -126px 0
+      z-index: 10
+  .btn-holder
+    overflow: hidden
+    margin: 0 -7px
+    padding: 5px 20px 6px 6px
+    background: #ebebeb
+    -webkit-border-radius: 0 0 3px 3px
+    border-radius: 0 0 3px 3px
+    border-top: 1px solid #dbdbdb
+    /*-webkit-box-shadow: inset 0 1px 0 0 #fff
+    /*box-shadow: inset 0 1px 0 0 #fff
+    .link-back
+      float: right
+      width: 23px
+      height: 17px
+      background: url(/assets/sprite.png) no-repeat -194px 0
+      margin: 6px 0 0
+    .reply-link, .like-link
+      float: left
+      width: 90px
+      border: solid
+      border-width: 1px
+      border-color: #c0c0c0 #bcbcbc #bfbfbf
+      -webkit-border-radius: 3px
+      border-radius: 3px
+      margin: 0 8px 0 0
+      color: #666
+      text-shadow: 0 1px 0 #fff
+      background: #fefefe url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMWUxZTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+      background: -moz-linear-gradient(top, #fefefe 0%, #e1e1e1 100%)
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #e1e1e1))
+      background: -webkit-linear-gradient(top, #fefefe 0%, #e1e1e1 100%)
+      background: -o-linear-gradient(top, #fefefe 0%, #e1e1e1 100%)
+      background: -ms-linear-gradient(top, #fefefe 0%, #e1e1e1 100%)
+      background: linear-gradient(to bottom, #fefefe 0%, #e1e1e1 100%)
+    .reply-link a, .like-link a
+      float: left
+      width: 57px
+      text-align: center
+      border-right: 1px solid #b2b2b2
+      padding: 5px 0 4px
+      color: #666
+      -webkit-border-radius: 2px 0 0 2px
+      border-radius: 2px 0 0 2px
+    .reply-link em, .like-link em
+      float: left
+      width: 31px
+      border-left: 1px solid #fbfafa
+      font-style: normal
+      text-align: center
+      padding: 5px 0 4px
+      color: #666
+      -webkit-border-radius: 0 2px 2px 0
+      border-radius: 0 2px 2px 0
+
+/* video-block
+
+/* btn-holder
+
+/* list-people
+
+.list-people
+  &.ui-listview
+    margin: -12px -7px 0
+    background: #e5e4e4
+  li
+    background: none
+    border: solid
+    border-width: 0 0 1px
+    border-color: #cdcdcd
+    /*-webkit-box-shadow: 0 1px 0 0 #fff
+    /*box-shadow: 0 1px 0 0 #fff
+    overflow: hidden
+  .ui-li-static.ui-li
+    padding: 8px 7px 7px 8px
+  .img-box
+    float: left
+    background: #fff
+    -webkit-border-radius: 3px
+    border-radius: 3px
+    border: 1px solid #bdbcbc
+    padding: 3px
+    /*-webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3)
+    /*box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3)
+    margin: 0 8px 0 0
+    img
+      vertical-align: top
+  .text-holder
+    overflow: hidden
+    padding: 2px 0 0
+  .link-holder
+    float: right
+    margin: 8px 0 0 20px
+  .follow-link
+    margin: 0
+    padding-right: 12px
+
+#main .list-people
+  h2
+    font-size: 14px
+    line-height: 18px
+    margin: 0
+  p
+    font-size: 11px
+    line-height: 13px
+    color: #6d6e70
+    text-overflow: clip
+    white-space: normal
+
+/* slideshow
+
+.slideshow
+  overflow: hidden
+  position: relative
+  margin: -4px 0 -12px
+  padding: 0 0 10px
+  .slideset
+    width: 100%
+    overflow: hidden
+    position: relative
+    .slide
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      padding: 3px
+      z-index: 2
+      background: #d4d4d4
+      overflow: hidden
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+      &.active
+        position: relative
+        z-index: 3
+  .placeholder
+    float: left
+    padding: 3px 4px 4px
+    background: #fff
+    /*-webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3)
+    /*box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3)
+    -webkit-border-radius: 4px
+    border-radius: 4px
+    border: 1px solid #bdbcbc
+    margin: 0 7px 0 0
+    img
+      vertical-align: top
+  .text-holder
+    overflow: hidden
+    padding: 5px 0 0
+  .follow-link
+    float: right
+    margin: 5px 0 0 10px
+    /*-webkit-box-shadow: none
+    /*box-shadow: none
+  .title
+    color: #555
+    font-size: 16px
+    line-height: 16px
+    text-shadow: 1px 1px 0 #fff
+  .email
+    display: inline-block
+    vertical-align: top
+    color: #00a4e4
+    text-shadow: 1px 1px 0 #fff
+    &.ui-link
+      display: inline-block
+      vertical-align: top
+      color: #00a4e4
+      text-shadow: 1px 1px 0 #fff
+    &:hover, &.ui-link:hover
+      color: #00a4e4
+  .info-text
+    padding: 2px 0 7px
+    overflow: hidden
+    font-size: 11px
+    line-height: 17px
+    text-shadow: 1px 1px 0 #fff
+    color: #555
+    text-align: center
+    text-transform: none
+    letter-spacing: 0
+    p
+      margin: 0
+  .switcher
+    position: absolute
+    bottom: 4px
+    left: 50%
+    margin: 0 0 0 -14px
+    z-index: 10
+    ul
+      padding: 2px 0 0
+      margin: 0
+      list-style: none
+      overflow: hidden
+      li
+        float: left
+        margin: 0 2px 0 3px
+      a
+        display: block
+        width: 7px
+        height: 7px
+        text-indent: -9999px
+        overflow: hidden
+        background: url(/assets/sprite.png) no-repeat -12px -51px
+      .active a
+        background-position: 0 -51px
+
+/* section
+
+.section
+  margin: -11px -7px 0
+  overflow: hidden
+  position: relative
+  img
+    display: block
+    width: 100%
+    max-width: 640px
+    height: auto
+    margin: 0 auto
+  .info-block
+    position: absolute
+    z-index: 5
+    left: 0
+    top: 10%
+    width: 100%
+    text-align: center
+  .logo
+    width: 158px
+    height: 65px
+    background: url(/assets/logo.png) no-repeat
+    margin: 0 0 1px
+  .info-block
+    .slogan
+      display: block
+      font-size: 17px
+      line-height: 22px
+      font-weight: normal
+      color: #fff
+      text-shadow: none
+      margin: 0 0 12px
+    .btn-holder
+      overflow: hidden
+      margin: 0 0 12px
+
+.link-download
+  display: inline-block
+  vertical-align: top
+  font-size: 15px
+  line-height: 20px
+  color: #fff !important
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.69)
+  padding: 10px 28px
+  -webkit-border-radius: 4px
+  border-radius: 4px
+  border: solid
+  border-width: 1px
+  border-color: #293d4a #23333d #23333d
+  background: #2cb1fc url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJjYjFmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYjk2ZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #2cb1fc 0%, #1b96db 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2cb1fc), color-stop(100%, #1b96db))
+  background: -webkit-linear-gradient(top, #2cb1fc 0%, #1b96db 100%)
+  background: -o-linear-gradient(top, #2cb1fc 0%, #1b96db 100%)
+  background: -ms-linear-gradient(top, #2cb1fc 0%, #1b96db 100%)
+  background: linear-gradient(to bottom, #2cb1fc 0%, #1b96db 100%)
+  /*-webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4)
+  /*box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4)
+  &.ui-link
+    color: #fff
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.69)
+    text-decoration: none
+    &:hover
+      color: #fff
+
+.section .link-login
+  display: inline-block
+  vertical-align: top
+  font-size: 11px
+  line-height: 14px
+  color: #fff
+  text-shadow: none
+  &:hover
+    color: #fff
+
+/* heading-block
+
+.heading-block
+  overflow: hidden
+  background: #d4d4d4
+  margin: 0 -7px 15px
+  border: solid
+  border-width: 1px 0
+  border-color: #bdbcbc #000 #bdbcbc
+  /*-webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5)
+  /*box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5)
+  padding: 6px 11px 4px
+
+#main .heading-block h1
+  font-size: 13px
+  line-height: 16px
+  color: #6d6e70
+  text-shadow: 1px 1px 0 #fff
+  margin: 0
+  text-transform: uppercase
+
+/* popupBasic
+
+#transparent
+  width: 215px
+  -webkit-border-radius: 5px
+  border-radius: 5px
+  border: 1px solid #393939
+  padding: 40px 40px 46px
+  background: rgba(21, 21, 21, 0.94)
+  width: 298px
+  margin: 10% 0 15px -4px
+  position: relative
+  top: -15px
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  text-align: center
+  /*-webkit-box-shadow: none
+  /*box-shadow: none
+  /*-webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4)
+  /*box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4)
+  .title
+    font-size: 19px
+    line-height: 23px
+    color: #fff
+    text-shadow: none
+    margin: 0 0 23px
+
+.btn-app-store
+  display: inline-block
+  vertical-align: top
+  width: 204px
+  height: 56px
+  text-indent: -9999px
+  overflow: hidden
+  background: url(/assets/btn-app-store.png) no-repeat
+
+#transparent .close
+  position: absolute
+  top: -15px
+  right: -10px
+  width: 32px
+  height: 32px
+  text-indent: -9999px
+  overflow: hidden
+  background: url(/assets/sprite.png) no-repeat -225px 0
+
+/* content-block user
+
+.content-block
+  &.user
+    padding: 6px 7px 0 6px
+    /*-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1)
+    /*box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1)
+  .holder .img-box
+    margin: 0 4px 0 0
+    position: relative
+    &.dedicated:after
+      content: ""
+      position: absolute
+      right: -5px
+      bottom: -5px
+      width: 14px
+      height: 14px
+      background: url(/assets/sprite2.png) no-repeat -27px 0
+  &.user .holder
+    margin: 0 0 0 -2px
+    padding: 0 0 5px
+
+#main .content-block.user h2
+  margin-top: 3px
+
+.content-block.user .holder
+  p
+    font-weight: normal
+  .time
+    font-weight: normal
+    right: 1px
+    top: 5px
+
+/* info-holder
+
+.info-holder
+  text-align: right
+  padding: 0 2px 6px
+  .notes
+    display: inline-block
+    vertical-align: top
+    margin: 0 0 0 12px
+    padding: 1px 0 0 18px
+    background: url(/assets/sprite2.png) no-repeat -86px 3px
+    color: #555 !important
+    font-size: 11px
+  .likes
+    display: inline-block
+    vertical-align: top
+    margin: 0 0 0 12px
+    padding: 1px 0 0 18px
+    background: url(/assets/sprite2.png) no-repeat -86px 3px
+    color: #555 !important
+    font-size: 11px
+    background: url(/assets/sprite2.png) no-repeat -86px -15px
+  .notes:hover, .likes:hover
+    text-decoration: underline !important
+    color: #555 !important
+
+.content-block.user
+  .video-block
+    margin-bottom: 6px
+  &.reply
+    margin-top: 37px
+    -webkit-border-radius: 4px 0 4px 4px
+    border-radius: 4px 0 4px 4px
+    .reply-box
+      position: absolute
+      max-width: 300px
+      top: -27px
+      right: -1px
+      font-size: 12px
+      line-height: 15px
+      color: #6b6b6b
+      background: #f2f2f2
+      border: 1px solid #c5c4c4
+      padding: 5px 10px
+      border-radius: 5px 5px 0 0
+      letter-spacing: 0.1px
+      /*-webkit-box-shadow: inset 0 1px 1px 1px rgba(255, 255, 255, 0.5), 0 -1px 2px 0 rgba(0, 0, 0, 0.1)
+      /*box-shadow: inset 0 1px 1px 1px rgba(255, 255, 255, 0.5), 0 -1px 2px 0 rgba(0, 0, 0, 0.1)
+
+/* reply-box
+
+/* massonry-content
+
+.massonry-content
+  margin: 0 -7px
+  background: #ececec
+  padding: 0 10px
+
+#main.style02 h2
+  font: bold 11px / 15px Arial, Helvetica, sans-serif
+  color: #fff
+  margin: 0 0 3px
+  padding: 0 3px
+  letter-spacing: 0.2px
+  text-shadow: none
+
+/* massonry-holder
+
+.massonry-holder
+  position: relative
+  margin: 0 -10px
+  padding: 6px 3px 6px 6px
+  .block
+    margin: 0 0 6px
+    position: relative
+    img
+      vertical-align: top
+    &.active:after
+      content: ""
+      position: absolute
+      left: 5px
+      top: -5px
+      z-index: 10
+      width: 28px
+      height: 19px
+      background: url(/assets/sprite2.png) no-repeat 0 -30px
+
+#main .list-people.user p
+  color: #555
+
+.list-people.user .text-holder
+  padding-top: 1px
+
+#main .list-people.user h2
+  margin-bottom: 5px
+
+.list-people.user
+  .ui-li-static.ui-li
+    padding: 6px 7px 6px 8px
+  .link-holder
+    margin: 10px 0 0 20px
+
+#main .list-people.user.add h2
+  margin-bottom: 0
+
+.list-people.user.add
+  .link-holder
+    margin: 10px 0 0 10px
+  .img-box
+    position: relative
+    &.mark:after
+      content: ""
+      position: absolute
+      right: -7px
+      bottom: -6px
+      background: url(/assets/sprite2.png) no-repeat -30px -32px
+      width: 19px
+      height: 18px
+      z-index: 4
+
+/* header-box
+
+.header-box
+  padding: 6px 4px 4px
+  background: #f1f0f0 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZjBmMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlM2UzZTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #f1f0f0 0%, #e3e3e3 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1f0f0), color-stop(100%, #e3e3e3))
+  background: -webkit-linear-gradient(top, #f1f0f0 0%, #e3e3e3 100%)
+  background: -o-linear-gradient(top, #f1f0f0 0%, #e3e3e3 100%)
+  background: -ms-linear-gradient(top, #f1f0f0 0%, #e3e3e3 100%)
+  background: linear-gradient(to bottom, #f1f0f0 0%, #e3e3e3 100%)
+  overflow: hidden
+
+#header .header-box
+  .img-box
+    float: left
+    width: 51px
+    -webkit-border-radius: 3px
+    border-radius: 3px
+    border: 1px solid #bdbcbc
+    padding: 3px
+    /*-webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3)
+    /*box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3)
+    margin: 0 8px 0 0
+    position: relative
+    overflow: visible
+    background: #f1f0f0 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZjBmMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlM2UzZTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+    background: -moz-linear-gradient(top, #f1f0f0 0%, #e3e3e3 100%)
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1f0f0), color-stop(100%, #e3e3e3))
+    background: -webkit-linear-gradient(top, #f1f0f0 0%, #e3e3e3 100%)
+    background: -o-linear-gradient(top, #f1f0f0 0%, #e3e3e3 100%)
+    background: -ms-linear-gradient(top, #f1f0f0 0%, #e3e3e3 100%)
+    background: linear-gradient(to bottom, #f1f0f0 0%, #e3e3e3 100%)
+    img
+      vertical-align: top
+  .text-holder
+    overflow: hidden
+    padding: 2px 0 0
+  .link-holder
+    float: right
+    margin: 0 0 0 6px
+  .follow-link
+    margin: 0
+    padding-right: 12px
+  h1
+    font-size: 14px
+    line-height: 18px
+    color: #148dd6
+    margin: 0
+    text-shadow: 0 1px 0 #fff
+    a
+      text-decoration: none
+      color: #148dd6
+      &.ui-link
+        text-decoration: none
+        color: #148dd6
+      &:hover, &.ui-link:hover
+        text-decoration: underline
+        color: #148dd6
+  p
+    font-size: 11px
+    line-height: 13px
+    color: #6d6e70
+    text-overflow: clip
+    white-space: normal
+    margin: 0
+    text-shadow: 0 1px 0 #fff
+    font-weight: normal
+  .img-box.mark:after
+    content: ""
+    position: absolute
+    right: -8px
+    bottom: -6px
+    background: url(/assets/sprite2.png) no-repeat
+    width: 21px
+    height: 20px
+
+/* tabset
+
+.tabset
+  width: 100%
+  padding: 0
+  margin: 0
+  list-style: none
+  border-top: 1px solid #d6d6d6
+  background: #f2f1f1 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #f2f1f1 0%, #e0e0e0 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f1f1), color-stop(100%, #e0e0e0))
+  background: -webkit-linear-gradient(top, #f2f1f1 0%, #e0e0e0 100%)
+  background: -o-linear-gradient(top, #f2f1f1 0%, #e0e0e0 100%)
+  background: -ms-linear-gradient(top, #f2f1f1 0%, #e0e0e0 100%)
+  background: linear-gradient(to bottom, #f2f1f1 0%, #e0e0e0 100%)
+  &:after
+    content: ''
+    display: block
+    clear: both
+  li
+    float: left
+    width: 33.333333333%
+  a
+    display: block
+    padding: 6px 9px
+    font-size: 12px
+    line-height: 15px
+    color: #808080
+    text-decoration: none
+    font-weight: normal
+    border-left: 1px solid #dadada
+    /*-webkit-box-shadow: inset 1px 1px 0 0 #fff
+    /*box-shadow: inset 1px 1px 0 0 #fff
+    position: relative
+    text-shadow: 0 1px 0 #fff
+    &.ui-link
+      display: block
+      padding: 6px 9px
+      font-size: 12px
+      line-height: 15px
+      color: #808080
+      text-decoration: none
+      font-weight: normal
+      border-left: 1px solid #dadada
+      /*-webkit-box-shadow: inset 1px 1px 0 0 #fff
+      /*box-shadow: inset 1px 1px 0 0 #fff
+      position: relative
+      text-shadow: 0 1px 0 #fff
+    &:hover, &.ui-link:hover
+      color: #808080
+  li:first-child a
+    border-left: none
+    /*-webkit-box-shadow: inset 0 1px 0 0 #fff
+    /*box-shadow: inset 0 1px 0 0 #fff
+  a span
+    display: block
+    font-weight: bold
+  .active a
+    color: #079fdd
+    text-decoration: none
+    &.ui-link
+      color: #079fdd
+      text-decoration: none
+  .arrow
+    position: absolute
+    z-index: 22
+    top: 100%
+    left: 50%
+    margin: 0 0 0 -11px
+    width: 21px
+    height: 10px
+    background: url(/assets/sprite2.png) no-repeat -47px 0
+    display: none
+  .active .arrow
+    display: block
+
+/* tabs-holder
+
+.tabs-holder, .tab-content
+  overflow: hidden
+  padding: 11px 7px
+  margin: -11px -7px
+
+.special-tab .logo
+  display: none
+
+/* btn-block
+
+.btn-block
+  vertical-align: top
+  padding: 0
+  list-style: none
+  margin: 1px 0 2px
+  width: 109px
+  display: none
+
+#header.special-tab .btn-block
+  display: inline-block
+
+.btn-block
+  &:after
+    content: ''
+    display: block
+    clear: both
+  li
+    float: left
+  a
+    display: block
+    width: 54px
+    height: 30px
+    font-size: 0
+    line-height: 0
+    background: url(/assets/btn-block.png) no-repeat -55px 0
+  li:first-child a
+    width: 55px
+    background: url(/assets/btn-block.png) no-repeat 0 -40px
+  .active a
+    background: url(/assets/btn-block.png) no-repeat -55px -40px
+  li:first-child.active a
+    background: url(/assets/btn-block.png) no-repeat
+
+#tab-1
+  .tab-001, .tab-002
+    display: none
+  .tab-001.active, .tab-002.active
+    display: block
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+  .logo
+    background: url(/assets/sprite2x.png) no-repeat
+    background-size: 300px 58px
+    width: 80px
+  #header .mobile-link
+    background: url(/assets/sprite2x.png) no-repeat -92px 0
+    background-size: 300px 58px
+    width: 18px
+    height: 30px
+  .content-block
+    .video-block .btn-play
+      background: url('/assets/sprite2x.png') no-repeat -126px 0
+      background-size: 300px 58px
+      width: 58px
+      height: 58px
+    .btn-holder .link-back
+      background: url('/assets/sprite2x.png') no-repeat -195px 0
+      background-size: 300px 58px
+  .carousel .btn-next
+    background: #e3e3e3 url('/assests/sprite2x.png') no-repeat -273px 12px
+    background-size: 300px 58px
+  .slideshow .switcher ul
+    a
+      background: url(/assets/sprite2x.png) no-repeat -12px -52px
+      background-size: 300px 58px
+    .active a
+      background: url(/assets/sprite2x.png) no-repeat 0 -50px
+      background-size: 300px 58px
+      height: 8px
+      margin-top: -2px
+  .header-block .setting-link
+    background: url(/assets/sprite2x.png) no-repeat -193px -29px
+    background-size: 300px 58px
+  .header-section .following
+    background: url(/assets/sprite2x.png) no-repeat -234px -34px
+    background-size: 300px 58px
+  .section .logo
+    background: url(/assets/logo@2x.png) no-repeat
+    background-size: 158px 65px
+  .btn-app-store
+    background: url(/assets/btn-app-store@2x.png) no-repeat
+    background-size: 204px 56px
+  .content-block .holder .img-box.dedicated:after
+    background: url(/assets/sprite2-2x.png) no-repeat -27px 0
+    background-size: 100px 50px
+  .info-holder .likes
+    background: url(/assets/sprite2-2x.png) no-repeat -86px 3px
+    background-size: 100px 50px
+    background: url(/assets/sprite2-2x.png) no-repeat -86px -15px
+    background-size: 100px 50px
+  .list-people.user.add .img-box.mark:after
+    background: url(/assets/sprite2-2x.png) no-repeat -31px -33px
+    background-size: 100px 50px
+  #header .header-box .img-box.mark:after
+    background: url('/assets/sprite2-2x.png') no-repeat
+    background-size: 100px 50px
+  .btn-block
+    a
+      background: url(/assets/btn-block2x.png) no-repeat -55px 0
+      background-size: 109px 70px
+    li:first-child a
+      background: url(/assets/btn-block2x.png) no-repeat 0 -40px
+      background-size: 109px 70px
+    .active a, a:hover
+      background: url(/assets/btn-block2x.png) no-repeat -55px -40px
+      background-size: 109px 70px
+    li:first-child
+      .active a, a:hover
+        background: url(/assets/btn-block2x.png) no-repeat
+        background-size: 109px 70px
+
+.vjs-default-skin div.vjs-big-play-button span
+  position:absolute
+  top: 50%
+  left: 50%
+  width: 59px
+  height: 59px
+  margin: -31px 0 0 -29px
+  background-image: url(/assets/sprite.png) !important
+  background-color: none !important
+  background-position: -126px 0
+  background-repat: no-repeat
+  z-index: 10
+
+.vjs-default-skin .vjs-big-play-button
+  border: 0 !important
+  background-color: none !important
+  clear: both
+
+
+  
+// Your own styles go here.
+
+
+
+      
+// Print styles
+@import "print"
